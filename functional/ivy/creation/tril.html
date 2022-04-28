@@ -89,12 +89,38 @@
 <li class="toctree-l1"><a class="reference internal" href="../../../roadmap.html">Roadmap</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../contributing.html">Contributing</a></li>
 </ul>
+<p class="caption"><span class="caption-text">Container</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../container/activations.html">Activations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../container/base.html">Base</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../container/container.html">Container</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../container/creation.html">Creation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../container/data_types.html">Data types</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../container/device.html">Device</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../container/elementwise.html">Elementwise</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../container/general.html">General</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../container/gradients.html">Gradients</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../container/image.html">Image</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../container/layers.html">Layers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../container/linear_algebra.html">Linear algebra</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../container/losses.html">Losses</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../container/manipulation.html">Manipulation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../container/norms.html">Norms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../container/random.html">Random</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../container/searching.html">Searching</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../container/set.html">Set</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../container/sorting.html">Sorting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../container/statistical.html">Statistical</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../container/utility.html">Utility</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../container/wrapping.html">Wrapping</a></li>
+</ul>
 <p class="caption"><span class="caption-text">Functional</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../activations.html">Activations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../compilation.html">Compilation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../constants.html">Constants</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../creation.html">Creation</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="arange.html">arange</a></li>
 <li class="toctree-l2"><a class="reference internal" href="asarray.html">asarray</a></li>
 <li class="toctree-l2"><a class="reference internal" href="zeros.html">zeros</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ones.html">ones</a></li>
@@ -108,12 +134,9 @@
 <li class="toctree-l2"><a class="reference internal" href="eye.html">eye</a></li>
 <li class="toctree-l2"><a class="reference internal" href="linspace.html">linspace</a></li>
 <li class="toctree-l2"><a class="reference internal" href="meshgrid.html">meshgrid</a></li>
-<li class="toctree-l2"><a class="reference internal" href="zeros_like.html">zeros_like</a></li>
 <li class="toctree-l2"><a class="reference internal" href="full.html">full</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ones.html">ones</a></li>
 <li class="toctree-l2"><a class="reference internal" href="from_dlpack.html">from_dlpack</a></li>
 <li class="toctree-l2"><a class="reference internal" href="logspace.html">logspace</a></li>
-<li class="toctree-l2"><a class="reference internal" href="arange.html">arange</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../data_type.html">Data type</a></li>
@@ -233,14 +256,13 @@
 <code class="sig-prename descclassname">ivy.</code><code class="sig-name descname">tril</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>ivy.array.Array<span class="p">, </span>ivy.NativeArray<span class="p">]</span></span></em>, <em class="sig-param"><span class="n">k</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="default_value">0</span></em><span class="sig-paren">)</span> &#x2192; ivy.array.Array<a class="reference internal" href="../../../_modules/ivy/functional/ivy/creation.html#tril"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ivy.functional.ivy.creation.tril" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the lower triangular part of a matrix (or a stack of matrices) x.</p>
 <dl class="simple">
-<dt>x:</dt><dd><p>input array having shape (…, M, N) and whose innermost two dimensions form MxN matrices.</p>
+<dt>x</dt><dd><p>input array having shape (…, M, N) and whose innermost two dimensions form MxN matrices.</p>
 </dd>
-<dt>k:</dt><dd><p>diagonal above which to zero elements. If k = 0, the diagonal is the main diagonal. If k &lt; 0, the diagonal is
+<dt>k</dt><dd><p>diagonal above which to zero elements. If k = 0, the diagonal is the main diagonal. If k &lt; 0, the diagonal is
 below the main diagonal. If k &gt; 0, the diagonal is above the main diagonal. Default: 0.</p>
 </dd>
-</dl>
-<dl class="simple">
-<dt>out:</dt><dd><p>an array containing the lower triangular part(s). The returned array must have the same shape and data type as
+<dt>Returns</dt><dd></dd>
+<dt>ret</dt><dd><p>an array containing the lower triangular part(s). The returned array must have the same shape and data type as
 x. All elements above the specified diagonal k must be zeroed. The returned array should be allocated on the
 same device as x.</p>
 </dd>

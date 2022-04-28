@@ -17,6 +17,7 @@ Data type
    data_type/iinfo.rst
    data_type/finfo.rst
    data_type/broadcast_to.rst
+   data_type/broadcast_arrays.rst
    data_type/dtype.rst
    data_type/astype.rst
    data_type/dtype_bits.rst
@@ -39,12 +40,18 @@ Data type
    data_type/invalid_dtype.rst
    data_type/convert_dtype.rst
    data_type/DefaultDtype:
+    """ """
+
     # noinspection PyShadowingNames
     def __init__.rst
    data_type/DefaultFloatDtype:
+    """ """
+
     # noinspection PyShadowingNames
     def __init__.rst
    data_type/DefaultIntDtype:
+    """ """
+
     # noinspection PyShadowingNames
     def __init__.rst
 

@@ -89,12 +89,38 @@
 <li class="toctree-l1"><a class="reference internal" href="../../../roadmap.html">Roadmap</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../contributing.html">Contributing</a></li>
 </ul>
+<p class="caption"><span class="caption-text">Container</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../container/activations.html">Activations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../container/base.html">Base</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../container/container.html">Container</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../container/creation.html">Creation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../container/data_types.html">Data types</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../container/device.html">Device</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../container/elementwise.html">Elementwise</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../container/general.html">General</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../container/gradients.html">Gradients</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../container/image.html">Image</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../container/layers.html">Layers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../container/linear_algebra.html">Linear algebra</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../container/losses.html">Losses</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../container/manipulation.html">Manipulation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../container/norms.html">Norms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../container/random.html">Random</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../container/searching.html">Searching</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../container/set.html">Set</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../container/sorting.html">Sorting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../container/statistical.html">Statistical</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../container/utility.html">Utility</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../container/wrapping.html">Wrapping</a></li>
+</ul>
 <p class="caption"><span class="caption-text">Functional</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../activations.html">Activations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../compilation.html">Compilation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../constants.html">Constants</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../creation.html">Creation</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="arange.html">arange</a></li>
 <li class="toctree-l2"><a class="reference internal" href="asarray.html">asarray</a></li>
 <li class="toctree-l2"><a class="reference internal" href="zeros.html">zeros</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ones.html">ones</a></li>
@@ -108,12 +134,9 @@
 <li class="toctree-l2 current"><a class="current reference internal" href="#">eye</a></li>
 <li class="toctree-l2"><a class="reference internal" href="linspace.html">linspace</a></li>
 <li class="toctree-l2"><a class="reference internal" href="meshgrid.html">meshgrid</a></li>
-<li class="toctree-l2"><a class="reference internal" href="zeros_like.html">zeros_like</a></li>
 <li class="toctree-l2"><a class="reference internal" href="full.html">full</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ones.html">ones</a></li>
 <li class="toctree-l2"><a class="reference internal" href="from_dlpack.html">from_dlpack</a></li>
 <li class="toctree-l2"><a class="reference internal" href="logspace.html">logspace</a></li>
-<li class="toctree-l2"><a class="reference internal" href="arange.html">arange</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../data_type.html">Data type</a></li>
@@ -232,26 +255,23 @@
 <dt id="ivy.functional.ivy.creation.eye">
 <code class="sig-prename descclassname">ivy.</code><code class="sig-name descname">eye</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">n_rows</span><span class="p">:</span> <span class="n">int</span></em>, <em class="sig-param"><span class="n">n_cols</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>int<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">k</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>int<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">0</span></em>, <em class="sig-param"><span class="n">dtype</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>ivy.Dtype<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">device</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>ivy.Device<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; ivy.array.Array<a class="reference internal" href="../../../_modules/ivy/functional/ivy/creation.html#eye"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ivy.functional.ivy.creation.eye" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns a two-dimensional array with ones on the k h diagonal and zeros elsewhere.</p>
-<p>Parameters
-:param n_rows: number of rows in the output array.
-:param n_cols: number of columns in the output array. If None, the default number of columns in the output array is</p>
-<blockquote>
-<div><p>equal to n_rows. Default: None.</p>
-</div></blockquote>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>k</strong> – index of the diagonal. A positive value refers to an upper diagonal, a negative value to a lower diagonal,
-and 0 to the main diagonal. Default: 0.</p></li>
-<li><p><strong>dtype</strong> – output array data type. If dtype is None, the output array data type must be the default floating-
-point data type. Default: None.</p></li>
-</ul>
+<p>Parameters</p>
+<dl class="simple">
+<dt>n_rows</dt><dd><p>number of rows in the output array.</p>
 </dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>device on which to place the created array. Default: None.</p>
+<dt>n_cols</dt><dd><p>number of columns in the output array. If None, the default number of columns in the output array is
+equal to n_rows. Default: None.</p>
 </dd>
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>an array where all elements are equal to zero, except for the k h diagonal, whose values are equal to one.</p>
+<dt>k</dt><dd><p>index of the diagonal. A positive value refers to an upper diagonal, a negative value to a lower diagonal,
+and 0 to the main diagonal. Default: 0.</p>
+</dd>
+<dt>dtype</dt><dd><p>output array data type. If dtype is None, the output array data type must be the default floating-
+point data type. Default: None.</p>
+</dd>
+<dt>device</dt><dd><p>device on which to place the created array.</p>
+</dd>
+<dt>Returns</dt><dd></dd>
+<dt>ret</dt><dd><p>device on which to place the created array. Default: None.</p>
 </dd>
 </dl>
 </dd></dl>

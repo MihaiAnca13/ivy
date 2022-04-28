@@ -89,6 +89,31 @@
 <li class="toctree-l1"><a class="reference internal" href="../../../roadmap.html">Roadmap</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../contributing.html">Contributing</a></li>
 </ul>
+<p class="caption"><span class="caption-text">Container</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../container/activations.html">Activations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../container/base.html">Base</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../container/container.html">Container</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../container/creation.html">Creation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../container/data_types.html">Data types</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../container/device.html">Device</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../container/elementwise.html">Elementwise</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../container/general.html">General</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../container/gradients.html">Gradients</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../container/image.html">Image</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../container/layers.html">Layers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../container/linear_algebra.html">Linear algebra</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../container/losses.html">Losses</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../container/manipulation.html">Manipulation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../container/norms.html">Norms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../container/random.html">Random</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../container/searching.html">Searching</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../container/set.html">Set</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../container/sorting.html">Sorting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../container/statistical.html">Statistical</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../container/utility.html">Utility</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../container/wrapping.html">Wrapping</a></li>
+</ul>
 <p class="caption"><span class="caption-text">Functional</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../activations.html">Activations</a></li>
@@ -217,22 +242,25 @@
 <h1>random_normal<a class="headerlink" href="#random-normal" title="Permalink to this headline">¶</a></h1>
 <dl class="py function">
 <dt id="ivy.functional.ivy.random.random_normal">
-<code class="sig-prename descclassname">ivy.</code><code class="sig-name descname">random_normal</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">mean</span><span class="o">=</span><span class="default_value">0.0</span></em>, <em class="sig-param"><span class="n">std</span><span class="o">=</span><span class="default_value">1.0</span></em>, <em class="sig-param"><span class="n">shape</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">dev</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/ivy/functional/ivy/random.html#random_normal"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ivy.functional.ivy.random.random_normal" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">ivy.</code><code class="sig-name descname">random_normal</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">mean</span><span class="o">=</span><span class="default_value">0.0</span></em>, <em class="sig-param"><span class="n">std</span><span class="o">=</span><span class="default_value">1.0</span></em>, <em class="sig-param"><span class="n">shape</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">device</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/ivy/functional/ivy/random.html#random_normal"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ivy.functional.ivy.random.random_normal" title="Permalink to this definition">¶</a></dt>
 <dd><p>Draws samples from a normal distribution.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>mean</strong> (<em>float</em>) – The mean of the normal distribution to sample from. Default is 0.</p></li>
-<li><p><strong>std</strong> (<em>float</em>) – The standard deviation of the normal distribution to sample from. Default is 1.</p></li>
-<li><p><strong>shape</strong> – Output shape. If the given shape is, e.g., (m, n, k), then m * n * k samples are drawn.
-If size is None (default), a single value is returned.</p></li>
-<li><p><strong>dev</strong> (<em>ivy.Device</em>) – device on which to create the array ‘cuda:0’, ‘cuda:1’, ‘cpu’ etc.</p></li>
-</ul>
+<dl class="simple">
+<dt>mean</dt><dd><p>The mean of the normal distribution to sample from. Default is 0.</p>
 </dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>Drawn samples from the parameterized uniform distribution.</p>
+<dt>std</dt><dd><p>The standard deviation of the normal distribution to sample from. Default is 1.</p>
+</dd>
+<dt>shape</dt><dd><p>Output shape. If the given shape is, e.g., (m, n, k), then m * n * k samples are drawn.
+If size is None (default), a single value is returned.</p>
+</dd>
+<dt>device</dt><dd><p>device on which to create the array ‘cuda:0’, ‘cuda:1’, ‘cpu’ etc. (Default value = None)</p>
 </dd>
 </dl>
+<blockquote>
+<div><dl class="simple">
+<dt>ret</dt><dd><p>Drawn samples from the parameterized uniform distribution.</p>
+</dd>
+</dl>
+</div></blockquote>
 </dd></dl>
 
 <div class="line-block">

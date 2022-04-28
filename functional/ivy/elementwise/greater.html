@@ -89,6 +89,31 @@
 <li class="toctree-l1"><a class="reference internal" href="../../../roadmap.html">Roadmap</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../contributing.html">Contributing</a></li>
 </ul>
+<p class="caption"><span class="caption-text">Container</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../container/activations.html">Activations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../container/base.html">Base</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../container/container.html">Container</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../container/creation.html">Creation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../container/data_types.html">Data types</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../container/device.html">Device</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../container/elementwise.html">Elementwise</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../container/general.html">General</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../container/gradients.html">Gradients</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../container/image.html">Image</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../container/layers.html">Layers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../container/linear_algebra.html">Linear algebra</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../container/losses.html">Losses</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../container/manipulation.html">Manipulation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../container/norms.html">Norms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../container/random.html">Random</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../container/searching.html">Searching</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../container/set.html">Set</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../container/sorting.html">Sorting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../container/statistical.html">Statistical</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../container/utility.html">Utility</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../container/wrapping.html">Wrapping</a></li>
+</ul>
 <p class="caption"><span class="caption-text">Functional</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../activations.html">Activations</a></li>
@@ -100,7 +125,6 @@
 <li class="toctree-l1 current"><a class="reference internal" href="../elementwise.html">Elementwise</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="bitwise_left_shift.html">bitwise_left_shift</a></li>
 <li class="toctree-l2"><a class="reference internal" href="add.html">add</a></li>
-<li class="toctree-l2"><a class="reference internal" href="pow.html">pow</a></li>
 <li class="toctree-l2"><a class="reference internal" href="bitwise_xor.html">bitwise_xor</a></li>
 <li class="toctree-l2"><a class="reference internal" href="exp.html">exp</a></li>
 <li class="toctree-l2"><a class="reference internal" href="expm1.html">expm1</a></li>
@@ -147,14 +171,13 @@
 <li class="toctree-l2"><a class="reference internal" href="tan.html">tan</a></li>
 <li class="toctree-l2"><a class="reference internal" href="atan.html">atan</a></li>
 <li class="toctree-l2"><a class="reference internal" href="atan2.html">atan2</a></li>
-<li class="toctree-l2"><a class="reference internal" href="cosh.html">cosh</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tanh.html">tanh</a></li>
 <li class="toctree-l2"><a class="reference internal" href="atanh.html">atanh</a></li>
 <li class="toctree-l2"><a class="reference internal" href="subtract.html">subtract</a></li>
 <li class="toctree-l2"><a class="reference internal" href="divide.html">divide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pow.html">pow</a></li>
 <li class="toctree-l2"><a class="reference internal" href="remainder.html">remainder</a></li>
 <li class="toctree-l2"><a class="reference internal" href="bitwise_right_shift.html">bitwise_right_shift</a></li>
-<li class="toctree-l2"><a class="reference internal" href="bitwise_left_shift.html">bitwise_left_shift</a></li>
 <li class="toctree-l2"><a class="reference internal" href="equal.html">equal</a></li>
 <li class="toctree-l2"><a class="reference internal" href="erf.html">erf</a></li>
 <li class="toctree-l2"><a class="reference internal" href="minimum.html">minimum</a></li>
@@ -272,21 +295,28 @@
 <h1>greater<a class="headerlink" href="#greater" title="Permalink to this headline">¶</a></h1>
 <dl class="py function">
 <dt id="ivy.functional.ivy.elementwise.greater">
-<code class="sig-prename descclassname">ivy.</code><code class="sig-name descname">greater</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x1</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>ivy.array.Array<span class="p">, </span>ivy.NativeArray<span class="p">]</span></span></em>, <em class="sig-param"><span class="n">x2</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>ivy.array.Array<span class="p">, </span>ivy.NativeArray<span class="p">]</span></span></em><span class="sig-paren">)</span> &#x2192; ivy.array.Array<a class="reference internal" href="../../../_modules/ivy/functional/ivy/elementwise.html#greater"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ivy.functional.ivy.elementwise.greater" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">ivy.</code><code class="sig-name descname">greater</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x1</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>ivy.array.Array<span class="p">, </span>ivy.NativeArray<span class="p">]</span></span></em>, <em class="sig-param"><span class="n">x2</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>ivy.array.Array<span class="p">, </span>ivy.NativeArray<span class="p">]</span></span></em>, <em class="sig-param"><span class="n">out</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>Union<span class="p">[</span>ivy.array.Array<span class="p">, </span>ivy.NativeArray<span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; ivy.array.Array<a class="reference internal" href="../../../_modules/ivy/functional/ivy/elementwise.html#greater"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ivy.functional.ivy.elementwise.greater" title="Permalink to this definition">¶</a></dt>
 <dd><p>Computes the truth value of x1_i &lt; x2_i for each element x1_i of the input array x1 with the respective
 element x2_i of the input array x2.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>x1</strong> – Input array.</p></li>
-<li><p><strong>x2</strong> – Input array.</p></li>
-<li><p><strong>f</strong> – Machine learning framework. Inferred from inputs if None.</p></li>
-</ul>
+<dl class="simple">
+<dt>x1</dt><dd><p>Input array.</p>
 </dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>an array containing the element-wise results. The returned array must have a data type of bool.</p>
+<dt>x2</dt><dd><p>Input array.</p>
+</dd>
+<dt>f</dt><dd><p>Machine learning framework. Inferred from inputs if None.</p>
 </dd>
 </dl>
+<blockquote>
+<div><dl class="simple">
+<dt>ret</dt><dd><p>an array containing the element-wise results. The returned array must have a data type of bool.</p>
+</dd>
+</dl>
+</div></blockquote>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">=</span> <span class="n">ivy</span><span class="o">.</span><span class="n">greater</span><span class="p">(</span><span class="n">ivy</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]),</span><span class="n">ivy</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">]))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="go">ivy.array([False, False,  True])</span>
+</pre></div>
+</div>
 </dd></dl>
 
 <div class="line-block">

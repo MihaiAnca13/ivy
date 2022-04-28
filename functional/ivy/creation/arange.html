@@ -36,8 +36,8 @@
   <link rel="stylesheet" href="../../../_static/css/custom.css" type="text/css" />
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="Data type" href="../data_type.html" />
-    <link rel="prev" title="logspace" href="logspace.html" /> 
+    <link rel="next" title="asarray" href="asarray.html" />
+    <link rel="prev" title="Creation" href="../creation.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -89,12 +89,38 @@
 <li class="toctree-l1"><a class="reference internal" href="../../../roadmap.html">Roadmap</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../contributing.html">Contributing</a></li>
 </ul>
+<p class="caption"><span class="caption-text">Container</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../container/activations.html">Activations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../container/base.html">Base</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../container/container.html">Container</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../container/creation.html">Creation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../container/data_types.html">Data types</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../container/device.html">Device</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../container/elementwise.html">Elementwise</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../container/general.html">General</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../container/gradients.html">Gradients</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../container/image.html">Image</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../container/layers.html">Layers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../container/linear_algebra.html">Linear algebra</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../container/losses.html">Losses</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../container/manipulation.html">Manipulation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../container/norms.html">Norms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../container/random.html">Random</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../container/searching.html">Searching</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../container/set.html">Set</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../container/sorting.html">Sorting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../container/statistical.html">Statistical</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../container/utility.html">Utility</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../container/wrapping.html">Wrapping</a></li>
+</ul>
 <p class="caption"><span class="caption-text">Functional</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../activations.html">Activations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../compilation.html">Compilation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../constants.html">Constants</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../creation.html">Creation</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">arange</a></li>
 <li class="toctree-l2"><a class="reference internal" href="asarray.html">asarray</a></li>
 <li class="toctree-l2"><a class="reference internal" href="zeros.html">zeros</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ones.html">ones</a></li>
@@ -108,12 +134,9 @@
 <li class="toctree-l2"><a class="reference internal" href="eye.html">eye</a></li>
 <li class="toctree-l2"><a class="reference internal" href="linspace.html">linspace</a></li>
 <li class="toctree-l2"><a class="reference internal" href="meshgrid.html">meshgrid</a></li>
-<li class="toctree-l2"><a class="reference internal" href="zeros_like.html">zeros_like</a></li>
 <li class="toctree-l2"><a class="reference internal" href="full.html">full</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ones.html">ones</a></li>
 <li class="toctree-l2"><a class="reference internal" href="from_dlpack.html">from_dlpack</a></li>
 <li class="toctree-l2"><a class="reference internal" href="logspace.html">logspace</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">arange</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../data_type.html">Data type</a></li>
@@ -230,34 +253,37 @@
 <h1>arange<a class="headerlink" href="#arange" title="Permalink to this headline">¶</a></h1>
 <dl class="py function">
 <dt id="ivy.functional.ivy.creation.arange">
-<code class="sig-prename descclassname">ivy.</code><code class="sig-name descname">arange</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">stop</span><span class="p">:</span> <span class="n">numbers.Number</span></em>, <em class="sig-param"><span class="n">start</span><span class="p">:</span> <span class="n">numbers.Number</span> <span class="o">=</span> <span class="default_value">0</span></em>, <em class="sig-param"><span class="n">step</span><span class="p">:</span> <span class="n">numbers.Number</span> <span class="o">=</span> <span class="default_value">1</span></em>, <em class="sig-param"><span class="n">dtype</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>ivy.Dtype<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">dev</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>ivy.Device<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; Union<span class="p">[</span>ivy.array.Array<span class="p">, </span>ivy.NativeArray<span class="p">]</span><a class="reference internal" href="../../../_modules/ivy/functional/ivy/creation.html#arange"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ivy.functional.ivy.creation.arange" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">ivy.</code><code class="sig-name descname">arange</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">start</span><span class="p">:</span> <span class="n">numbers.Number</span></em>, <em class="sig-param"><span class="n">stop</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>numbers.Number<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">step</span><span class="p">:</span> <span class="n">numbers.Number</span> <span class="o">=</span> <span class="default_value">1</span></em>, <em class="sig-param"><span class="n">dtype</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>ivy.Dtype<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">device</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>ivy.Device<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; Union<span class="p">[</span>ivy.array.Array<span class="p">, </span>ivy.NativeArray<span class="p">]</span><a class="reference internal" href="../../../_modules/ivy/functional/ivy/creation.html#arange"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ivy.functional.ivy.creation.arange" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns evenly spaced values within a given interval, with the spacing being specified.</p>
 <p>Values are generated within the half-open interval [start, stop) (in other words, the interval including start but
 excluding stop). For integer arguments the function is equivalent to the Python built-in range function,
 but returns an array in the chosen ml_framework rather than a list.</p>
 <p>See <span class="math notranslate nohighlight">\(linspace\)</span> for a certain number of evenly spaced values in an interval.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>stop</strong> (<em>number</em>) – End of interval. The interval does not include this value, except in some cases where step is not an
-integer and floating point round-off affects the length of out.</p></li>
-<li><p><strong>start</strong> (<em>number</em><em>, </em><em>optional</em>) – Start of interval. The interval includes this value. The default start value is 0.</p></li>
-<li><p><strong>step</strong> (<em>number</em><em>, </em><em>optional</em>) – Spacing between values. For any output out, this is the distance between two adjacent values,
-out[i+1] - out[i]. The default step size is 1. If step is specified as a position argument,
-start must also be given.</p></li>
-<li><p><strong>dtype</strong> (<em>data-type string</em><em>, </em><em>optional</em>) – The desired data-type for the array in string format, i.e. ‘float32’ or ‘int64’.
-If not given, then the type will be determined as the minimum type required to hold the objects in the
-sequence.</p></li>
-<li><p><strong>dev</strong> (<em>ivy.Device</em>) – device on which to create the array ‘cuda:0’, ‘cuda:1’, ‘cpu’ etc.</p></li>
-</ul>
+<dl class="simple">
+<dt>stop</dt><dd><p>End of interval. The interval does not include this value, except in some cases where step is not an
+integer and floating point round-off affects the length of out.</p>
 </dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p><p>Tensor of evenly spaced values.</p>
-<p>For floating point arguments, the length of the result is ceil((stop - start)/step).
-Because of floating point overflow, this rule may result in the last element of out being greater than stop.</p>
-</p>
+<dt>start</dt><dd><p>Start of interval. The interval includes this value. The default start value is 0.</p>
+</dd>
+<dt>step</dt><dd><p>Spacing between values. For any output out, this is the distance between two adjacent values,
+out[i+1] - out[i]. The default step size is 1. If step is specified as a position argument,
+start must also be given.</p>
+</dd>
+<dt>dtype</dt><dd><p>The desired data-type for the array in string format, i.e. ‘float32’ or ‘int64’.
+If not given, then the type will be determined as the minimum type required to hold the objects in the
+sequence.</p>
+</dd>
+<dt>device</dt><dd><p>device on which to create the array ‘cuda:0’, ‘cuda:1’, ‘cpu’ etc.</p>
 </dd>
 </dl>
+<blockquote>
+<div><dl>
+<dt>ret</dt><dd><p>Tensor of evenly spaced values.</p>
+<p>For floating point arguments, the length of the result is ceil((stop - start)/step).
+Because of floating point overflow, this rule may result in the last element of out being greater than stop.</p>
+</dd>
+</dl>
+</div></blockquote>
 </dd></dl>
 
 <div class="line-block">
@@ -275,10 +301,10 @@ Because of floating point overflow, this rule may result in the last element of 
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../data_type.html" class="btn btn-neutral float-right" title="Data type" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="asarray.html" class="btn btn-neutral float-right" title="asarray" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="logspace.html" class="btn btn-neutral float-left" title="logspace" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="../creation.html" class="btn btn-neutral float-left" title="Creation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
